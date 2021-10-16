@@ -79,41 +79,70 @@ input[type=radio]{
     display: none;
 }
 
-.slide-text{
-    /* position: relative;
-    top: 100px; */
-    margin-left: 50px;
+.controls-and-text-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 30px auto;
+}
+
+.slider-text-wrapper{
+    position: relative;
+    min-height: 30px;
+    width: 70%;
+    overflow: hidden;
 }
 
 .slider-controls{
-    width: 500px;
+    width: 20%;
+}
+
+.slide-text{
+    position: relative;
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+    margin-left: 10px;
+}
+
+.text-1{
+    left: 100%;
+    transition: left 0.3s ease;
+}
+
+.text-2{
+    left: 100%;
+    top: -2.5rem;
+    transition: left 0.3s ease;
+}
+
+.text-3{
+    left: 100%;
+    top: -5rem;
+    transition: left 0.3s ease;
+}
+
+.text-4{
+    left: 100%;
+    top: -7.5rem;
+    transition: left 0.3s ease;
 }
 
 .slide-point{
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 3rem;
+    height: 3rem;
     background-color: aqua;
     margin-right: 10px;
     cursor: pointer;
 }
 
-#slide-point-1:checked~.slider-wrapper .slider-inner .slide-image-1{
+#slide-point-1:checked~.slider-wrapper .slider-inner .slide-image-1,
+#slide-point-2:checked~.slider-wrapper .slider-inner .slide-image-2,
+#slide-point-3:checked~.slider-wrapper .slider-inner .slide-image-3,
+#slide-point-4:checked~.slider-wrapper .slider-inner .slide-image-4,
+#slide-point-1:checked~.controls-and-text-wrapper .slider-text-wrapper .text-1,
+#slide-point-2:checked~.controls-and-text-wrapper .slider-text-wrapper .text-2,
+#slide-point-3:checked~.controls-and-text-wrapper .slider-text-wrapper .text-3,
+#slide-point-4:checked~.controls-and-text-wrapper .slider-text-wrapper .text-4{
     left: 0;
-}
-
-#slide-point-2:checked~.slider-wrapper .slider-inner .slide-image-2{
-    left: 0;
-}
-
-#slide-point-3:checked~.slider-wrapper .slider-inner .slide-image-3{
-    left: 0;
-}
-
-#slide-point-4:checked~.slider-wrapper .slider-inner .slide-image-4{
-    left: 0;
-}
-
-#slide-point-1:checked~.text-1{
-    display: block;
 }
