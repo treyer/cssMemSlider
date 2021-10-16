@@ -1,0 +1,10 @@
+.wrapper{
+    width: 80vw;
+    margin: 10vw auto;
+}
+
+.slide-text,
+input[type=radio]{
+    display: none;
+}
+
