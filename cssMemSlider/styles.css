@@ -27,9 +27,10 @@
 }
 
 .slider-inner{
-    width: 500%;
+    width: 100%;
     height: 700px;
     position: relative;
+    overflow: hidden;
 }
 
 .slide-image{
@@ -66,9 +67,6 @@
     left: 400%
 }
 
-
-
-
 .slide-text,
 input[type=radio]{
     display: none;
@@ -79,9 +77,27 @@ input[type=radio]{
 }
 
 .slide-point{
+    display: inline-block;
     width: 50px;
     height: 50px;
     background-color: aqua;
     margin-right: 10px;
+    cursor: pointer;
+}
+
+#slide-point-1:checked~.slide-image-1{
+    left: 0;
+}
+
+#slide-point-2:checked~.slide-image-2{
+    left: 0;
+}
+
+#slide-point-3:checked~.slide-image-3{
+    left: 0;
+}
+
+#slide-point-4:checked~.slide-image-4{
+    left: 0;
 }
 
