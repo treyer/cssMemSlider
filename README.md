@@ -1,1 +1,1 @@
-# cssMemSlider
+https://treyer.github.io/cssMemSlider/cssMemSlider/index.html
