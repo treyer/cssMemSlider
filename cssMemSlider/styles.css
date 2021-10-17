@@ -82,19 +82,37 @@ input[type=radio]{
     font-size: 2.2rem;
     line-height: 2.5rem;
     padding-left: 0.6rem;
+    padding-top: 1rem;
 }
 
 .slide-point{
     display: inline-block;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    background-color: aqua;
+    width: 4rem;
+    height: 4rem;
+    /* border-radius: 50%; */
+    /* background-color: aqua; */
     margin-right: 0.5rem;
+    border-radius: 50%;
     cursor: pointer;
+    background-color: transparent;
+    display: flex;
 }
 
-.slide-point:hover{
+.slide-point:hover>span{
+    background-color: white;
+}
+
+.slide-point span{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    border-radius: 50%;
+    background-color: aqua;
+}
+
+.slide-point span:hover{
     background-color: white;
 }
 
@@ -134,12 +152,23 @@ input[type=radio]{
 #slide-point-2:checked~.controls-and-text-wrapper .slider-controls .slide-point-2,
 #slide-point-3:checked~.controls-and-text-wrapper .slider-controls .slide-point-3,
 #slide-point-4:checked~.controls-and-text-wrapper .slider-controls .slide-point-4{
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    cursor: auto;
+}
+
+#slide-point-1:checked~.controls-and-text-wrapper .slider-controls .slide-point-1 span,
+#slide-point-2:checked~.controls-and-text-wrapper .slider-controls .slide-point-2 span,
+#slide-point-3:checked~.controls-and-text-wrapper .slider-controls .slide-point-3 span,
+#slide-point-4:checked~.controls-and-text-wrapper .slider-controls .slide-point-4 span{
+    background-color: transparent;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, .8);
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     border: 4px solid aqua;
     box-sizing: border-box;
-    background-color: transparent;
-    cursor: auto;
 }
 
 @media (max-width: 1024px) {
@@ -151,6 +180,30 @@ input[type=radio]{
     .slide-point{
         width: 2.2rem;
         height: 2.2rem;
+    }
+
+    .slide-point span{
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-top: 0.5rem;
+        margin-left: 0.5rem;
+    }
+
+    #slide-point-1:checked~.controls-and-text-wrapper .slider-controls .slide-point-1,
+    #slide-point-2:checked~.controls-and-text-wrapper .slider-controls .slide-point-2,
+    #slide-point-3:checked~.controls-and-text-wrapper .slider-controls .slide-point-3,
+    #slide-point-4:checked~.controls-and-text-wrapper .slider-controls .slide-point-4{
+        width: 2rem;
+        height: 2rem;
+    }
+
+    #slide-point-1:checked~.controls-and-text-wrapper .slider-controls .slide-point-1 span,
+    #slide-point-2:checked~.controls-and-text-wrapper .slider-controls .slide-point-2 span,
+    #slide-point-3:checked~.controls-and-text-wrapper .slider-controls .slide-point-3 span,
+    #slide-point-4:checked~.controls-and-text-wrapper .slider-controls .slide-point-4 span{
+        width: 1.5rem;
+        height: 1.5rem;
+        border: 2px solid aqua;
     }
 }
 
@@ -174,8 +227,4 @@ input[type=radio]{
         text-align: center;
     }
 
-    .slide-point{
-        width: 1.7rem;
-        height: 1.7rem;
-    }
 }
