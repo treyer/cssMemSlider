@@ -141,3 +141,41 @@ input[type=radio]{
     background-color: transparent;
     cursor: auto;
 }
+
+@media (max-width: 1024px) {
+    .slide-text{
+        font-size: 1.5rem;
+        line-height: 1.7rem;
+    }
+
+    .slide-point{
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .controls-and-text-wrapper{
+        flex-direction: column-reverse;
+    }
+
+    .slider-text-wrapper{
+        width: 100%;
+    }
+
+    .slider-controls{
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .slide-text{
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .slide-point{
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+}
