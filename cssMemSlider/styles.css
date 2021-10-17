@@ -12,7 +12,7 @@
 
 .wrapper{
     width: 80vw;
-    max-width: 1440px;
+    max-width: 90rem;
     margin: 2rem auto;
     display: flex;
     flex-direction: column;
@@ -22,14 +22,12 @@
 .slider-wrapper{
     position: relative;
     width: 90%;
-    height: 700px;
     margin: 120px auto 0;
     overflow: hidden;
 }
 
 .slider-inner{
     width: 400%;
-    height: 700px;
     position: relative;
     left: 100%;
     background-repeat: no-repeat;
@@ -42,7 +40,6 @@
     position: relative;
     display: block;
     width: 25%;
-    height: 700px;
     object-fit: cover;
     background-repeat: no-repeat;
     background-size: 100% 700px;
