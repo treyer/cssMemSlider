@@ -22,7 +22,7 @@
 .slider-wrapper{
     position: relative;
     width: 90%;
-    margin: 120px auto 0;
+    margin: 7.5rem auto 0;
     overflow: hidden;
 }
 
@@ -41,11 +41,8 @@
     display: block;
     width: 25%;
     object-fit: cover;
-    background-repeat: no-repeat;
-    background-size: 100% 700px;
 }
 
-/* .slide-text, */
 input[type=radio]{
     display: none;
 }
@@ -65,39 +62,26 @@ input[type=radio]{
 
 .slider-text-wrapper{
     position: relative;
-    min-height: 30px;
+    min-height: 2rem;
     width: 70%;
     overflow: hidden;
 }
 
-.slide-text{
+.slider-text-inner{
+    left: 100%;
     position: relative;
+    width: 400%;
+    min-height: 2rem;
+    transition: left 0.3s ease;
+}
+
+.slide-text{
+    float: left;
+    box-sizing: border-box;
+    width: 25%;
     font-size: 2.2rem;
     line-height: 2.5rem;
-    margin-left: 10px;
-}
-
-.text-1{
-    left: 100%;
-    transition: left 0.3s ease;
-}
-
-.text-2{
-    left: 100%;
-    top: -2.5rem;
-    transition: left 0.3s ease;
-}
-
-.text-3{
-    left: 100%;
-    top: -5rem;
-    transition: left 0.3s ease;
-}
-
-.text-4{
-    left: 100%;
-    top: -7.5rem;
-    transition: left 0.3s ease;
+    padding-left: 0.6rem;
 }
 
 .slide-point{
@@ -114,11 +98,20 @@ input[type=radio]{
     background-color: white;
 }
 
-#slide-point-1:checked~.controls-and-text-wrapper .slider-text-wrapper .text-1,
-#slide-point-2:checked~.controls-and-text-wrapper .slider-text-wrapper .text-2,
-#slide-point-3:checked~.controls-and-text-wrapper .slider-text-wrapper .text-3,
-#slide-point-4:checked~.controls-and-text-wrapper .slider-text-wrapper .text-4{
+#slide-point-1:checked~.controls-and-text-wrapper .slider-text-wrapper .slider-text-inner{
     left: 0;
+}
+
+#slide-point-2:checked~.controls-and-text-wrapper .slider-text-wrapper .slider-text-inner{
+    left: -100%;
+}
+
+#slide-point-3:checked~.controls-and-text-wrapper .slider-text-wrapper .slider-text-inner{
+    left: -200%
+}
+
+#slide-point-4:checked~.controls-and-text-wrapper .slider-text-wrapper .slider-text-inner{
+    left: -300%;
 }
 
 #slide-point-1:checked~.slider-wrapper .slider-inner{
